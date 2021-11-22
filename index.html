@@ -1,467 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav-right {
-  float: right;
-}
-
-
-.fa {
-  padding: 10px;
-  font-size: 20px;
-  width: 30px;
-  text-align: centre;
-  text-decoration: none;
-  margin: 5px 2px;
-  
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
- 
-  color: white;
-}
-
-.fa-instagram {
-  
-  color: white;
-}
-
-
-.fa-twitter {
-  
-  color: white;
-}
-
-
-/* Slideshow container */
-.slideshow-container {
-position:absolute;
-left:250px;
-top:100px;
- margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #000000;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  top:30%;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  
-}
- img { 
-      opacity: 0.4;       
-            } 
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
-table {
-  position:absolute;
-  left:250px;
-  font-family: arial, sans-serif;
-  table-layout:100%;
-  border-collapse: collapse;
-  width: 50%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: centre;
-  padding: 8px;
-  width:25%
-}
-tr:nth-child(odd) {
-  background-color:#fffacd;
-}
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Create three equal columns that floats next to each other */
-.c {
-  position:relative;
-  top:400px;
-  left:250px;
-  float: left;
-  width: 335px;
-  padding: 5px;
-  height: 220px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.r:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-position:relative;
-  top:550px;
-  background-color: #333;
-  color:white;
-  float: left;
-  width: 25%;
-  padding: 10px;
-  height: 300px; 
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-a {
+<title>Project DietiCan</title>
+<meta name="robots" content="index, follow">
+<meta name="description" >
+<meta name="keywords" >
+<meta name="author" >
+<link rel="shortcut icon" > 
 	
-	text-decoration:none;
-	 transition-duration: 0.4s;
-  cursor: pointer;
-	
-}
+<!-- CSS -->
+<link href="css/uikit.min.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 
-a:link{
-	
-	color:white;
-	
-	
-}
-
-a:visited {
-	
-	color:white;
-
-}
-
-a:hover
-{ 
-color: green;
- }
- 
- input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-</style>
 </head>
+
 <body>
-
- <body style="background-color:#00FFFF;">
- 
- <div class="topnav">
-  <a class="active" >DietiCan</a>
- 
-  <div class="topnav-right">
-    <a href="Main page.html" >Home</a>
-    <a href="Blog.html">Blog</a>
-	 <a href="About.html">About</a>
-  <a href="Feedback.html">Feedback/inquiry</a>
-   <a href="Admin.html">Admin</a>
-  </div>
-</div>
- 
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="pic1.png" width="1000" height="300" />
-  <div class="text">Are you suffering from overweight problems?
-Having difficulties to overcome obesity?Do you need a diet-planner ? No problem here we are to help you
- <p>Click below the for the Solution</p> 
- <a href="#"><i class="fas fa-robot" style="font-size:50px"></i></a>
-</div>
-</div>
-
- 
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="pic2.png" width="1000" height="300">
-  <div class="text">What is BMI?
-  <p>  Body mass index(BMI) is a convenient,
-  inexpensive method to determine health level of a person and expressed by division of body mass by the square of the body height,unit kg/m2.    </p>
-</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="pic3.png" width="1000" height="300">
-  <div class="text">BMI and it's categories:
-  <table>
-  <tr>
-    <th>BMI</th>
-    <th>Category</th>
-    
-  </tr> 
-    <tr>
-    <th> less than 18.5 </th>
-    <th>Underweight</th>
-    
-  </tr> 
-    <tr>
-    <th> 18.5 to 24.9 </th>
-    <th>Normal weight</th>
-    
-  </tr> 
-    <tr>
-    <th>25 to 29.9</th>
-    <th>Overweight</th>
-    
-  </tr> 
-  
-   </tr> 
-    <tr>
-    <th>30 and higher</th>
-    <th>Obesity</th>
-    
-  </tr> 
-  </table></div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
-<script>
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
-</script>
-
-<div class="r">
-  <div class="c" style="background-color:white;" >
-   
-    <p>'I was recently suffering from obesity since 2017 .
-	I don't know what meal plan to follow.After I started to follow  my diet planner and exercise tips from DietiCan,I started to reduce my weight.'</p>
-	<p style="position:absolute; top: 150px; left:200px; ">Siti Salmah,</p>
-     <p style="position:absolute; top: 170px; left:200px; ">Clerk</p>
-
-  </div>
-  <div class="c" style="background-color:white;" >
-   <p>'Since I am middle class employee,
-   I cannot afford to consult a dietitian and I don't have time for it.Now,with DietiCan,I can check health level and suitable diet planner for free'</p>
-	<p style="position:absolute; top: 150px; left:200px; ">Ravi,</p>
-     <p style="position:absolute; top:170px; left:200px; "> Factory Worker</p>
-
-  </div>
-  <div class="c" style="background-color:white;">
-    <p>I am an athlete who got recently injured from last match.
-	So,I looked for a suitable diet-planner tool to maintain my BMI,body health and then I found DietiCan,which is a suitable platform to look for</p>
-	<p style="position:absolute; top: 150px; left:200px; ">Ah Chong,</p>
-     <p style="position:absolute; top:170px; left:200px; ">Athlete</p>
-  </div>
-</div>
-
-
-
-<div class="row">
-  <div class="column">
-    <h3>Contact</h3>
-    <p style ="font-size:15px;">Address:Lot 24,Taman Kuching,71010 Port Dickson,Seremban</p>
-	<p style ="font-size:15px;">Phone:017-3456728</p>
+<div id="page">
 	
-  </div>
-  <div class="column">
- 
-    <h3>Menu</h3>
-  <a href="Main Page.html" >  <p  style ="font-size:15px;" >Home</p></a>
-	<a href="Blog.html"><p style ="font-size:15px;">Blog</p></a>
-	<a href="https://share.botstar.com/?id=se1f86017-12d6-41ae-a6a5-7f4451158743"><p style ="font-size:15px;">About</p></a>
-	<a href="Feedback.html"><p style ="font-size:15px;">Feedback/Inquiry</p></a>
+	<header class="hdr-row-wrap full-width">	
+		<div class="hdr-row">
+			<!-- Branding and Navigation -->
+			<div class="hdr-nav">
+				<div class="container-l">
+					<div class="uk-grid-collapse" uk-grid>
+						<div class="uk-width-2-5@m hdr-left">
+							<!-- Nesterd Grid - Branding -->
+							<div class="uk-grid-collapse" uk-grid>
+								<div class="uk-width-4-5 uk-width-1-1@m">
+									<a href=""><img src="images/logo.png" width="50" height="56" alt="maczac"></a>
+								</div>
+								<div class="uk-width-1-5 uk-hidden@m">
+									<div class="mobi-menu">
+										<a class="btn-toggle" href="#mobi-menu" uk-toggle> <span uk-icon="icon: menu; ratio: 2"></span></a>
+									</div> <!-- /.mobi-menu -->
+								</div>
+							</div>
+						</div>
+						<div class="uk-width-3-5@m hdr-right">
+							<nav class="desktop-menu uk-visible@m">
+								<ul class="menu">
+									<li><a href="#review" class="bg-transition" uk-scroll>Review</a></li>
+									<li><a href="#BMI" class="bg-transition"uk-scroll>BMI</a></li>
+									<li><a href="#blog" class="bg-transition"uk-scroll>Diet Blog</a></li>
+									<li><a href="#contact-us" class="bg-transition" uk-scroll>Contact</a></li>
+								</ul>
+							</nav> <!-- /.desktop-menu -->
+						</div> <!-- /.hdr-right -->
+					</div>
+				</div>
+			</div>
+			<!-- Banner -->
+			<div class="container-m">
+				<div class="uk-position-bottom uk-overlay hdr-overlay">
+					<!-- Grid -->
+					<div class="uk-grid-collapse" uk-grid>
+						<div class="uk-width-1-5@m">
+							<img src="images/logo++.png" class="img-circ" width="100" height="120" alt="dietitian">
+						</div>
+						<div class="uk-width-4-5@m">
+							<h2 class="h2-hdr">DietiCan</h2>
+							<div class="line-break"></div>
+							<h3 class="h3-hdr">Are you suffering from overweight problems? Having difficulties to overcome obesity? Do you need a diet-planner? No problem  we are HERE to help you...</h3>
+						</div>
+					</div>
+					<!-- End of Grid -->
+				</div>
+			</div>
+		</div> <!-- /.hdr-row -->
+	</header>
 	
-  </div>
-  <div class="column" >
-    <h3>Social medias</h3>
-	<a href="https://www.facebook.com/thanesh.maryadas/" class="fa fa-facebook"></a>
-    <a href="https://www.facebook.com/thanesh.maryadas/" class="fa fa-twitter"></a>
-    <a href="https://www.instagram.com/thaneshmaryadas/" class="fa fa-instagram"></a>
-  </div>
-  <div class="column">
-    <h3>Others</h3>
-    <p style ="font-size:15px;"> Subscribe us to get more updates from us</p>
-     <form name="myForm" action="/action_page.php" onsubmit="alert('Thank you for your subscription.');" method="post" required>
-  Email address: <input type="text" name="fname">
-  <input type="submit" value="Submit">
-</form>
-<br>
-    <p style ="font-size:10px">&#169; DietiCan.All rights Reserved  </p>
-	 <a href="privacypolicy.html"> <p style ="font-size:10px;">Privacy Policy</p></a>
-  </div>
-</div>
-<script>var BotStar={appId:"se1f86017-12d6-41ae-a6a5-7f4451158743",mode:"livechat"};!function(t,a){var e=function(){(e.q=e.q||[]).push(arguments)};e.q=e.q||[],t.BotStarApi=e;!function(){var t=a.createElement("script");t.type="text/javascript",t.async=1,t.src="https://widget.botstar.com/static/js/widget.js";var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();}(window,document)</script>
+
+	<section class="body-row-wrap full-width">
+	<div id="BMI">
+		<div class="body-row">
+			<div class="uk-child-width-1-2@m uk-grid-collapse uk-grid-match" uk-grid>
+			
+				<div class="body-left">
+					<div class="tag-wrap-l">
+						<img data-src="images/diatician.jpg" class="img-clip-r" width="957" height="765" alt="diatician" uk-img>
+					</div>
+				</div>
+				<div class="body-right">
+					<div class="body-content">
+						<h2 class="h2-dark">What is BMI?</h2>
+						<p>Body Mass Index (BMI) is a person's weight in kilograms divided by the square of height in meters.</p>
+						<p>BMI is a reasonable indicator of body fat for both adults and children. Because BMI does not measure body fat directly, it should not be used as a diagnostic tool. Instead, BMI should be used as a measure to track weight status in populations and as a screening tool to identify potential weight problems in individuals.
+.</p>
+						<div class="uk-text-center uk-text-left@m" uk-lightbox>
+							<div class="uk-inline uk-dark">
+								<div>
+									<a href="https://youtu.be/1LWuG1lOXJs" data-caption="Lightbox Popup Video" data-attrs="width: 1280; height: 720;"><span class="vdo">Learn</span> <span class="btn-play" uk-icon="icon: play-circle; ratio: 3.5"></span> <span class="vdo">More</span></a>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="uk-text-left@m"><a href="#" class="btn-green bg-transition bg-shadow">Learn more</a></div> -->
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<section class="btm-one-wrap full-width">
+		<div class="btm-one">
+			<div class="container-l">
+				<!-- Parent Grid -->
+				<div class="uk-grid-medium uk-text-center" uk-grid>
+					<div class="uk-width-1-1">
+						<h2 class="h2-dark">User Reviews</h2>
+						<div class="rev-star uk-text-center">
+							<span class="uk-margin-small-right" uk-icon="icon: star; ratio: 1.5"></span> <span class="uk-margin-small-right" uk-icon="icon: star; ratio: 1.5"></span> <span class="uk-margin-small-right" uk-icon="icon: star; ratio: 1.5"></span> <span class="uk-margin-small-right" uk-icon="icon: star; ratio: 1.5"></span> <span class="uk-margin-small-right" uk-icon="icon: star; ratio: 1.5"></span>
+						<div id="review">
+						</div>
+						<!-- Nested Child Grid -->
+						<div class="review">
+							<div class="uk-child-width-1-3@m uk-grid-medium uk-text-center uk-grid-match" uk-grid>
+								<!-- 1 -->
+								<div>
+									<div class="uk-card uk-card-default uk-card-hover uk-card-body">
+										<h3>Reliable source</h3>
+										<p>I was recently suffering from obesity since 2017 .I don’t know what meal plan to follow.After I started to follow  my diet planner and exercise tips from DietiCan,I started to reduce my weight </p>
+										<div class="rev-footer">
+											<p><em>Siti Salmah (clerk)</em></p>
+										</div>
+									</div>
+								</div>
+								<!-- 2 -->
+								<div>
+									<div class="uk-card uk-card-default uk-card-hover uk-card-body">
+										<h3>Suitable for everyone</h3>
+										<p> I am an athlete who got recently injured from last match.So,I looked for a suitable diet-planner tool to maintain my BMI,body health and then I found DietiCan,which is a suitable platform to look for.</p>
+										<div class="rev-footer">
+											<p><em>Ali (athlete)</em></p>
+										</div>
+									</div>
+								</div>
+								<!-- 3 -->
+								<div>
+									<div class="uk-card uk-card-default uk-card-hover uk-card-body">
+										<h3>It is free and fun to use</h3>
+										<p>Since I am middle class employee,I cannot afford to consult a dietitian and I don’t have time for it.Now,with DietiCan,I can check health level and suitable diet planner for free</p>
+										<div class="rev-footer">
+											<p><em>Ravi (factory worker)</em></p>
+										</div>
+									</div>
+								</div>
+							</div> <!-- /.uk-grid -->
+						</div> <!-- /.review -->
+						<!-- End Review -->
+						<div class="uk-margin-large-top uk-text-center"><a href="" target="_blank" class="btn-green bg-transition bg-shadow">More Reviews</a></div>
+						<!-- End of Nested Child Grid -->
+						</div>
+					</div>
+				</div>
+				<!-- End of Grid -->
+			</div>  <!-- /.container -->
+		</div> <!-- /.btm-one -->
+	</section>
+	
+	<section class="btm-two-wrap full-width">
+		<div class="btm-two">
+			<div class="uk-child-width-1-2@m uk-grid-collapse uk-grid-match" uk-grid>
+				<div class="btm-two-right uk-flex-last@m">
+					<div class="tag-wrap-r">
+						<img data-src="images/diet-blog.jpg" class="img-clip-l" width="957" height="643" alt="diatician" uk-img>
+					</div>
+				</div> <!-- /.btm-two-right -->
+				<div class="btm-two-left">
+					<div class="btm-two-content">
+					<div id="blog">
+						<h2 class="h2-dark uk-margin-medium-top uk-margin-medium-bottom">Diet and Nutrition Blog</h2>
+						<div class="faq-wrap">
+							<ul uk-accordion="multiple: false">
+								<li class="bg-shadow">
+									<a class="uk-accordion-title faq-title" href="#">Role of exercise in diet plan</a>
+									<div class="uk-accordion-content faq-content">
+										<p>Combining exercise with a healthy diet is a more effective way to lose weight than depending on calorie restriction alone. Exercise can prevent or even reverse the effects of certain diseases. Exercise lowers blood pressure and cholesterol, which may prevent a heart attack.</p>
+										<p class="uk-text-right"><a href="https://www.nursinginpractice.com/clinical/obesity-and-nutrition/nutrition/the-importance-of-a-healthy-diet-and-exercise/" class="hvr-line-dark-center">Read more</a></p>
+									</div>
+								</li>
+								<li class="bg-shadow">
+									<a class="uk-accordion-title faq-title" href="#">Importance of water</a>
+									<div class="uk-accordion-content faq-content">
+										<p>Adult humans consist around 60% percent water. Water is essential for the kidneys and other bodily functions. It carries oxygen throughout the cell. It also lubricates the joints and disks of the spine. Water boosts skin healthy and beauty and helps maintain blood pressure. By the time you feel thirsty, your body has lost more than 1 percent of its total water. So let’s not feel thirst. Take a break right now and have a glass of water</p>
+										<p class="uk-text-right"><a href="https://www.indiahomehealthcare.com/blogpost/the-importance-of-water-in-our-daily-lives/#:~:text=Our%20bodies%20use%20water%20in,eating%20foods%20that%20contain%20water." class="hvr-line-dark-center">Read more</a></p>
+									</div>
+								</li>
+								<li class="bg-shadow">
+									<a class="uk-accordion-title faq-title" href="#">Effect of smoking on our health</a>
+									<div class="uk-accordion-content faq-content">
+										<p>Smoking can cause cardiovascular disease. Smoking also increases risk of blood clots, which block flow to the heart,brain or legs. On average, life expectancy of a smoker is 10 years less than a nonsmoker. Smoking affects the body's ability to absorb a variety of vitamins and minerals including calcium and vitamins C and D.Cigarette smoke contains more than 7,000 chemicals, 70 of which are known to cause cancer.So, be aware of it  and if you want to stop you need to small changes in lifestyle which help resist the temptation to smoke.For, example,think positive,consider your diet plan .For example, try to choose diet plan which distract your smoking habit.</p>
+										<p class="uk-text-right"><a href="https://www.cdc.gov/tobacco/basic_information/health_effects/index.htm#:~:text=Smoking%20causes%20cancer%2C%20heart%20disease,immune%20system%2C%20including%20rheumatoid%20arthritis." class="hvr-line-dark-center">Read more</a></p>
+									</div>
+								</li>
+								<li class="bg-shadow">
+									<a class="uk-accordion-title faq-title" href="#">Is fat is important in diet plan?</a>
+									<div class="uk-accordion-content faq-content">
+										<p>Yes,but a small amount of fat is an essential part of a healthy, balanced diet. Fat is a source of essential fatty acids, which the body cannot make itself. Fat helps the body absorb vitamin A, vitamin D and vitamin E. These vitamins are fat-soluble, which means they can only be absorbed with the help of fats.</p>
+										<p class="uk-text-right"><a href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/fats/dietary-fats" class="hvr-line-dark-center">Read more</a></p>
+									</div>
+								</li>
+								<li class="bg-shadow">
+									<a class="uk-accordion-title faq-title" href="#">Some facts about apples</a>
+									<div class="uk-accordion-content faq-content">
+										<p>Apples are a member of the rose family of plants, along with pears, peaches, plums and cherries. Apples are fat, sodium, and cholesterol free. Apples controls your cholesterol level and blood pressure.  Apples are also aids digestion because it contains fibre. The, antioxidants in apples may prevent cancer. So, remember the fact that an apple a day, keeps the doctor away.</p>
+										<p class="uk-text-right"><a href="https://parleefarms.com/apple-facts/" class="hvr-line-dark-center">Read more</a></p>
+									</div>
+								</li>
+							</ul>
+						</div> <!-- /.faq-wrap -->
+						</div> <!-- /.div id="blog">
+					</div> <!-- /.btm-two-content -->
+				</div> <!-- /.btm-two-left -->
+			</div>
+		</div> <!-- /.btm-two -->
+	</section>
+	
+	<section class="btm-three-wrap full-width">
+		<div class="btm-three container-m">
+			<div class="uk-grid-small uk-grid-divider uk-text-center uk-child-width-1-2@m" uk-grid>
+				<!-- Right Column -->
+				<!-- Quick Contact Form -->
+				<div id="contact-us">
+					<div class="uk-card qc-card">
+						<h2 class="h2-dark">Contact Me </h2>
+						<!-- ##### Quick Contact ##### -->
+						<div class="contact-form">
+							<form class="uk-grid-small" uk-grid>
+								<div class="uk-width-1-2@s">
+									<input class="uk-input form-text" type="text" placeholder="First Name" required>
+								</div>
+								<div class="uk-width-1-2@s">
+									<input class="uk-input form-text" type="text" placeholder="Last Name" required>
+								</div>
+								<div class="uk-width-1-2@s">
+									<input class="uk-input form-text" type="text" placeholder="E-mail Address" required>
+								</div>
+								<div class="uk-width-1-2@s">
+									<input class="uk-input form-text" type="text" placeholder="Telephone">
+								</div>
+								<div class="uk-width-1-1">
+									<textarea class="uk-textarea form-textarea" rows="5" placeholder="Message" required></textarea>
+								</div>
+								<div class="uk-width-1-1 uk-text-center">
+									<button class="quick-submit uk-button bg-transition">Submit</button>
+								</div>
+							</form>
+							<!-- End Quick Contact Form -->
+						</div> <!-- /.contact-form -->
+					</div> <!-- /.qc-card -->
+				</div> <!-- /#contact-us -->
+				<!-- Left Column -->
+				<div class="btt-left uk-flex-first@m">
+					<h2 class="uk-margin-small-bottom">Address</h2>
+					<p>	Lot 24,Taman Kuching, <br>
+						71010 Port Dickson,Seremban <br>
+						Telephone: 017-3456728 </p>
+					<p><a  class="hvr-line-dark-center" target="_blank">SOCIAL MEDIAS</a></p>
+					<!-- Social -->
+					<ul class="social uk-margin-small-top">
+						<li><a href="https://www.facebook.com/thanesh.maryadas/" target="_blank" class="hvr-sweep-to-top" uk-tooltip="title: Facebook; pos: bottom"><span uk-icon="icon: facebook; ratio: 1.40"></span></a></li>
+						<li><a href="https://twitter.com/AMaryadas" target="_blank" class="hvr-sweep-to-top" uk-tooltip="title: Twitter; pos: bottom"><span uk-icon="icon: twitter; ratio: 1.40"></span></a></li>
+						<li><a href="https://www.youtube.com/channel/UCfF1PWiMf7F0DUBpZl-VLhg" target="_blank" class="hvr-sweep-to-top" uk-tooltip="title: YouTube; pos: bottom"><span uk-icon="icon: youtube; ratio: 1.40"></span></a></li>
+						<li><a href="https://www.instagram.com/thaneshmaryadas/" target="_blank" class="hvr-sweep-to-top" uk-tooltip="title: Instagram; pos: bottom"><span uk-icon="icon: instagram; ratio: 1.40"></span></a></li>
+					</ul>
+				</div>
+			</div> <!-- /.uk-grid -->			
+		</div> <!-- /.btm-three -->
+	</section>
+	
+	<!-- ##### FOOTER ##### -->
+	<footer class="footer-outer">
+		<div class="footer-nav">
+			<div class="container-l">
+				<ul class="menu">
+					<li><a href="index.html" class="hvr-sweep-to-top">Home</a></li>
+					<li><a href="#review" class="hvr-sweep-to-top">Review</a></li>
+					<li><a href="#BMI" class="hvr-sweep-to-top">BMI</a></li>
+					<li><a href="#blog" class="hvr-sweep-to-top">Diet Blog</a></li>
+					<li><a href="#contact-us" class="hvr-sweep-to-top" uk-scroll>Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer-wrap container-l">
+			<div class="copyright">
+				<p>&copy;  2021 <a href="index.html" target="_blank" class="hvr-line-light-center">DietiCan.com</a>. All rights reserved.</p>
+				<p>Photo credit: Google images</p>
+				<p><a href="privacypolicy.html" target="_blank"  class="hvr-line-light-center">Privacy Policy</a> </p>
+			</div> <!-- /.copyright -->
+			<a href="#" id="go-top" class="bg-transition" title="Go to top" uk-totop uk-scroll></a>
+		</div>
+	</footer>
+
+<!-- ##### Offcanvas ##### -->
+<div id="mobi-menu" uk-offcanvas="mode: push; overlay: true; flip: true">
+	<div class="uk-offcanvas-bar">
+		<div class="uk-text-right"><button class="uk-close-large uk-offcanvas-close" type="button" uk-close></button></div>
+		<ul class="menu uk-list uk-list-divider">
+			<li><a href="index.html" class="bg-transition"><span uk-icon="icon: triangle-right"></span>  Home</a></li>
+			<li><a href="index.html" class="bg-transition"><span uk-icon="icon: triangle-right"></span>  Review</a></li>
+            <li><a href="#BMI" class="bg-transition"><span uk-icon="icon: triangle-right"></span> BMI</a></li>
+			            <li><a href="#blog" class="bg-transition"><span uk-icon="icon: triangle-right"></span> Diet Blog</a></li>
+            <li><a href="#contact-us" class="bg-transition" uk-scroll><span uk-icon="icon: triangle-right"></span> Contact Me</a></li>
+		</ul>         
+	</div> <!-- /.uk-offcanvas-bar -->
+</div> <!-- /#mobi-menu -->
+<!-- ##### End Offcanvas ##### -->
+
+<!-- Scripts -->
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/uikit.min.js" type="text/javascript"></script>
+<script src="js/uikit-icons.min.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+
+</div> <!-- #page -->
+	<script>var BotStar={appId:"se1f86017-12d6-41ae-a6a5-7f4451158743",mode:"livechat"};!function(t,a){var e=function(){(e.q=e.q||[]).push(arguments)};e.q=e.q||[],t.BotStarApi=e;!function(){var t=a.createElement("script");t.type="text/javascript",t.async=1,t.src="https://widget.botstar.com/static/js/widget.js";var e=a.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();}(window,document)</script>
 </body>
-</html> 
+</html>
